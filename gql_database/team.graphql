@@ -1,0 +1,9 @@
+type Team @key(fields: "id") {
+  id: Number!
+  firstName: String!
+  lastName: String!
+  picture: String
+  quote: String
+  email: String
+  devType: String!
+}

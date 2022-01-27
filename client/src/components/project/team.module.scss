@@ -1,0 +1,178 @@
+.team {
+    margin: auto;
+    padding-left: 0;
+
+    @media (min-width: 750px) {
+        padding-left: 10rem;
+    }
+
+    margin-left:10rem h1 {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+    }
+
+    .box {
+        color: black;
+        box-sizing: border-box;
+        border: 2px solid black;
+        width: 100%;
+        max-width: 19rem;
+        border-radius: 1.5rem;
+        padding: 0 2rem;
+        margin: 0 auto 2rem;
+    }
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+h6 {
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.teamCards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8rem;
+
+    .cardContainer {
+        background-color: var(--main-purple);
+        border-radius: 5px;
+        color: #B3B8CD;
+        padding-top: 30px;
+        position: relative;
+        width: 350px;
+        margin: 1rem 1rem;
+        max-width: 100%;
+        min-width: 10rem;
+        // min-height: rem;
+        transition: 0.125s ease all;
+        text-align: center;
+
+        &:hover {
+            box-shadow: 0px 10px 20px 10px var(--main-purple);
+            transform: scale(1.01);
+            transition: 0.125s ease all;
+        }
+
+        .pro {
+            color: #231E39;
+            background-color: var(--main-orange);
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 3px 7px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        .round {
+            border: 1px solid #03BFCB;
+            border-radius: 50%;
+            padding: 7px;
+        }
+
+        .quote {
+            text-align: center;
+        }
+
+        .email {
+            margin: 0.75rem 0;
+            color: var(--main-orange);
+            font-size: 1.1rem;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button {
+
+                margin: 0.5rem;
+
+                &.primary {
+                    background-color: #03BFCB;
+                    border: 1px solid #03BFCB;
+                    border-radius: 3px;
+                    color: #231E39;
+                    font-family: Montserrat, sans-serif;
+                    font-weight: 500;
+                    padding: 10px 25px;
+
+                    &:hover {
+                        background-color: unset;
+                        color: #02899C;
+
+                    }
+
+                    &.ghost {
+                        background-color: transparent;
+                        color: #02899C;
+
+                        &:hover {
+                            background-color: #03BFCB;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .skills {
+            background-color: #1F1A36;
+            text-align: left;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .skills {
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    border: 1px solid #2D2747;
+                    border-radius: 2px;
+                    display: inline-block;
+                    font-size: 12px;
+                    margin: 0 7px 7px 0;
+                    padding: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:48rem) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .section {
+
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+
+        .box {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}

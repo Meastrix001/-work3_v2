@@ -1,0 +1,165 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateProjectInput {
+  createdOn: DateTime!
+  desc: String!
+  endingOn: DateTime!
+  price: Float!
+  projectOwner: String!
+  repository: String!
+  startingOn: DateTime!
+  state: String!
+  teamSizeReq: Float!
+  title: String!
+}
+
+input CreateTeamInput {
+  devType: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  quote: String!
+}
+
+input CreateUserDataInput {
+  devType: String!
+  firstName: String!
+  lastName: String!
+  owner_id: String!
+  picture: String!
+  role: String!
+}
+
+input CreateUserInput {
+  devType: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  password: String!
+  role: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type LoginResponse {
+  access_token: String!
+  user: User!
+}
+
+type Mutation {
+  createProject(createProjectInput: CreateProjectInput!): Project!
+  createTeam(createTeamInput: CreateTeamInput!): Team!
+  createUser(createUserInput: CreateUserInput!): User!
+  createUserData(createUserDataInput: CreateUserDataInput!): UserData!
+  login(loginUserInputtt: String!): LoginResponse!
+  removeProject(id: Int!): Project!
+  removeTeam(id: Int!): Team!
+  removeUser(id: Int!): User!
+  removeUserData(id: Int!): UserData!
+  updateProject(updateProjectInput: UpdateProjectInput!): Project!
+  updateTeam(updateTeamInput: UpdateTeamInput!): Team!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  updateUserData(updateUserDataInput: UpdateUserDataInput!): UserData!
+}
+
+type Project {
+  createdOn: DateTime!
+  desc: String!
+  endingOn: DateTime!
+  id: Int!
+  price: Float!
+  projectOwner: String!
+  repository: String!
+  startingOn: DateTime!
+  state: String!
+  teamSizeReq: Float!
+  title: String!
+}
+
+type Query {
+  Projects: [Project!]!
+  Pzroject(id: Int!): Project!
+  findByArgs(email: String!): User!
+  teamMember(id: Int!): Team!
+  teamMembers: [Team!]!
+  user(email: String!): User!
+  userData(id: Int!): UserData!
+  users: [User!]!
+}
+
+type Team {
+  devType: String!
+  email: String!
+  firstName: String!
+  id: Int!
+  lastName: String!
+  quote: String!
+}
+
+input UpdateProjectInput {
+  createdOn: DateTime
+  desc: String
+  endingOn: DateTime
+  id: Int!
+  price: Float
+  projectOwner: String
+  repository: String
+  startingOn: DateTime
+  state: String!
+  teamSizeReq: Float
+  title: String
+}
+
+input UpdateTeamInput {
+  devType: String
+  email: String
+  firstName: String
+  id: Int!
+  lastName: String
+  quote: String
+}
+
+input UpdateUserDataInput {
+  devType: String
+  firstName: String
+  id: Int!
+  lastName: String
+  owner_id: String
+  picture: String
+  role: String
+}
+
+input UpdateUserInput {
+  devType: String
+  email: String
+  firstName: String
+  id: Int!
+  lastName: String
+  password: String
+  role: String
+}
+
+type User {
+  devType: String!
+  email: String!
+  firstName: String!
+  id: Int!
+  lastName: String!
+  password: String!
+  role: String!
+}
+
+type UserData {
+  devType: String!
+  firstName: String!
+  id: Int!
+  lastName: String!
+  owner_id: String!
+  picture: String!
+  role: String!
+}

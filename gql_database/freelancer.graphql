@@ -1,0 +1,36 @@
+type User  @key(fields: "id") {
+  id: ID!;
+  email: String!
+  password: String!
+}
+
+# User => UserData = one to one
+type UserData {
+  firstName: String!
+  lastName: String!
+  picture: String
+  # devType: Junior / Medior / Senior / unset(Project managers only)
+  devType: String!
+  # role: FreeLancer / PM / SuperAdmin
+  role: String 
+  owner_id:  User.id
+}
+
+# query example
+
+# query findUser($email: String!) {
+#   findUser(email: $email){
+#     id
+#     email
+#     password
+# 
+#     UserData {
+#     id
+#     firstName
+#     lastName
+#     picture
+#     devType
+#     
+#     }
+#   }
+# }

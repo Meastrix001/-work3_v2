@@ -1,0 +1,95 @@
+@use '../project/main.module.scss';
+
+.fieldContainer {
+    width: 100%;
+    max-width: 20rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.125s ease all;
+    margin: auto;
+
+    input {
+        height: 2rem;
+        background-color: white;
+        border: none;
+        width: 20rem;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        transition: 0.125s ease all;
+        background-color: rgba(146, 145, 145, 0.481);
+    }
+
+    padding: 0.5rem;
+
+
+    section {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin-top: 0.5rem;
+        width: fit-content;
+
+        label {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        input {
+            height: 2rem;
+            background-color: white;
+            border: none;
+            width: 20rem;
+            padding: 0 1rem;
+            box-sizing: border-box;
+            transition: 0.125s ease all;
+            border-radius: 25px 25px 0 25px;
+            border: 3px solid var(--main-purple);
+            margin-bottom: 0.2rem;
+
+
+        }
+
+        @media (min-width: 45rem) {
+            transition: 0.125s ease all;
+
+            input {
+                padding: 1.2rem;
+            }
+        }
+
+    }
+
+    .eyeContainer {
+        position: absolute;
+        top: 2.7rem;
+        right: 1.2rem;
+        transition: 0.125s ease all;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0.25rem;
+            height: inherit;
+        }
+
+        @media (min-width: 45rem) {
+            transition: 0.125s ease all;
+            top: 3rem;
+            right: 1.8rem;
+        }
+    }
+
+
+}
+
+.prevalues {
+    display: flex;
+    justify-content: flex-start;
+    color: green;
+    padding: 2rem;
+}

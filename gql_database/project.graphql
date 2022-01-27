@@ -1,0 +1,16 @@
+type Project @key(fields: "id") {
+  id: ID!
+  title: String!
+  desc: String!
+  projectOwner: String!
+  teamSizeReq: Number!
+  skillReq: string
+  TeamMembers: string
+  # state: requested / active / finished?
+  state: String!
+  price: Number
+  repository: String!
+  createdOn: Number!
+  startingOn: Number!
+  endingOn: Number!
+}

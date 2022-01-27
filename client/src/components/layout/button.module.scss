@@ -1,0 +1,25 @@
+button {
+  background-color: var(--main-purple);
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  margin: auto;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+
+  p {
+    padding: 0.75rem 1.25rem;
+    width: fit-content;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--main-purple-hover);
+    transition: 0.125s ease;
+  }
+}

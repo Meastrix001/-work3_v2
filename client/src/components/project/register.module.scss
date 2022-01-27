@@ -1,0 +1,195 @@
+@use './main.module.scss';
+
+.register {
+    color: black;
+    background-color: var(--background-gray);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .form {
+        margin: auto;
+        width: fit-content;
+
+        input {
+            border-radius: 25px 25px 0 25px;
+            border: 3px solid var(--main-purple);
+            margin-bottom: 0.2rem;
+        }
+
+
+        h5 {
+            width: fit-content;
+            margin: 0;
+            margin-left: auto;
+            margin-right: -1rem;
+            margin-top: -0.5rem;
+            color: var(--error-red);
+            animation: fadeIn;
+            animation-duration: 1s;
+        }
+
+        @media (min-width: 48rem) {
+            max-width: 50vw;
+        }
+    }
+}
+
+.sectionOpen {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
+    display: block;
+    animation: stepOpen;
+    animation-duration: 0.75s;
+}
+
+.sectionClosed {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    // display: none;
+    -webkit-animation: stepClosed 0.75s forwards;
+    animation: stepClosed 0.75s forwards;
+    animation-fill-mode: forwards;
+}
+
+.progressDots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .progressDotOne,
+    .progressDot {
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--main-orange);
+        border-radius: 50%;
+        margin: 2rem 1rem;
+    }
+
+    .progressDotOne {
+        background-color: var(--main-purple);
+
+    }
+
+    .progressDotTwo {
+        background-color: var(--main-purple);
+    }
+
+    .progressDotThree {
+        background-color: var(--main-purple);
+
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.header {
+    color: var(--main-purple);
+    font-size: 2rem;
+}
+
+.overviewItem {
+    display: flex;
+    align-items: center;
+
+    span {
+        &:first-child {
+            width: 15rem;
+            text-align: right;
+        }
+
+        margin-left: 1rem;
+    }
+}
+
+.overview {}
+
+.selection {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        label {}
+
+        input {
+            width: 5rem;
+            margin: auto;
+        }
+    }
+}
+
+.picture {
+    width: 15rem;
+    height: 15rem;
+    margin: auto;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.noPicture {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--main-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 1.6rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        margin-right: -10rem;
+    }
+
+    to {
+        opacity: 1;
+        margin-right: -1rem;
+    }
+}
+
+@keyframes stepOpen {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 50%;
+        top: 50%;
+        transform: translateX(50%) translateY(-50%);
+    }
+}
+
+.fieldWrapper {
+    width: fit-content;
+    margin: auto;
+}
+
+@keyframes stepClosed {
+    0% {
+        left: 50%;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: -50%;
+        visibility: hidden;
+    }
+}

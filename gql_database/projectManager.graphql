@@ -1,0 +1,36 @@
+type ProjectManager  @key(fields: "id") {
+  id: ID!;
+  email: String!
+  password: String!
+}
+
+# User => UserData = one to one
+type ProjectManagerData @Key(fields: "id") {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  picture: String
+  devType: String!
+  # role: FreeLancer / PM / SuperAdmin
+  role: String 
+  owner_id:  User.id
+}
+
+# query example
+
+# query findUser($email: String!) {
+#   findUser(email: $email){
+#     id
+#     email
+#     password
+# 
+#     UserData {
+#     id
+#     firstName
+#     lastName
+#     picture
+#     devType
+#     
+#     }
+#   }
+# }
